@@ -101,7 +101,7 @@ input, select, textarea {
 	body {
 		background: linear-gradient(-45deg, #ffd89b, #c6b793, #8c968b, #537583, #19547b);
 		background-size: 400% 400%;
-		animation: gradient 10s ease infinite;
+		animation: gradient 5s ease infinite;
 		height: 500vh;
 	}
 	@keyframes gradient {
