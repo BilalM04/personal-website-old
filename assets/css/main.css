@@ -2454,6 +2454,20 @@ input, select, textarea {
 				width: 50%;
 			  }
 
+	.logoImage {
+		border-radius: 0;
+		display: inline-block;
+		position: relative;
+		border: 0;
+		margin: 5px;
+		text-decoration: none; 
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.logoImage:hover {
+		transform: scale(1.07);
+	}
+
 /* List */
 
 	ol {
