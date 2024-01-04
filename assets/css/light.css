@@ -1,6 +1,12 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
+/*
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -17,8 +23,7 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
-}
+	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -94,15 +99,22 @@ input, select, textarea {
 	}
 
 	body {
-		/* background: linear-gradient(-45deg, #ffd89b, #c6b793, #8c968b, #537583, #19547b); */
-		/* background-color: #000; */
-		background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+		background: linear-gradient(-45deg, #ffd89b, #c6b793, #8c968b, #537583, #19547b);
 		background-size: 400% 400%;
-		/* animation: gradient 5s ease infinite; */
+		animation: gradient 5s ease infinite;
 		height: 500vh;
-		
 	}
-
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 	#toggle {
 		position: relative;
 		display: flex;
@@ -139,11 +151,14 @@ input, select, textarea {
 		visibility: hidden;
 	}
 
-	#toggle.active + svg.moon {
+	#toggle.active svg.moon {
 		visibility: hidden;
 	}
 
-
+	#toggle.active svg.sun {
+		visibility: hidden;
+		visibility: visible;
+	}
 
 	#toggle.active {
 		background: #FFF;
@@ -175,42 +190,6 @@ input, select, textarea {
 					inset 0 -4px 4px rgba(255, 255, 255, 1);
 	}
 
-	.stars {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		height: 1px;
-		width: 1px;
-		background-color: #fff;
-		border-radius: 50%;
-		box-shadow: -42vw -4vh 0px 0px #fff,25vw -41vh 0px 0px #fff,-20vw 49vh 0px 1px #fff,5vw 40vh 1px 1px #fff,29vw 19vh 1px 0px #fff,-44vw -13vh 0px 0px #fff,46vw 41vh 0px 1px #fff,-3vw -45vh 0px 1px #fff,47vw 35vh 1px 0px #fff,12vw -8vh 1px 0px #fff,-34vw 48vh 1px 1px #fff,32vw 26vh 1px 1px #fff,32vw -41vh 1px 1px #fff,0vw 37vh 1px 1px #fff,34vw -26vh 1px 0px #fff,-14vw -49vh 1px 0px #fff,-12vw 45vh 0px 1px #fff,-44vw -33vh 0px 1px #fff,-13vw 41vh 0px 0px #fff,-36vw -11vh 0px 1px #fff,-23vw -24vh 1px 0px #fff,-38vw -27vh 0px 1px #fff,16vw -19vh 0px 0px #fff,28vw 33vh 1px 0px #fff,-49vw -4vh 0px 0px #fff,16vw 32vh 0px 1px #fff,36vw -18vh 1px 0px #fff,-25vw -30vh 1px 0px #fff,-23vw 24vh 0px 1px #fff,-2vw -35vh 1px 1px #fff,-25vw 9vh 0px 0px #fff,-15vw -34vh 0px 0px #fff,-8vw -19vh 1px 0px #fff,-20vw -20vh 1px 1px #fff,42vw 50vh 0px 1px #fff,-32vw 10vh 1px 0px #fff,-23vw -17vh 0px 0px #fff,44vw 15vh 1px 0px #fff,-40vw 33vh 1px 1px #fff,-43vw 8vh 0px 0px #fff,-48vw -15vh 1px 1px #fff,-24vw 17vh 0px 0px #fff,-31vw 50vh 1px 0px #fff,36vw -38vh 0px 1px #fff,-7vw 48vh 0px 0px #fff,15vw -32vh 0px 0px #fff,29vw -41vh 0px 0px #fff,2vw 37vh 1px 0px #fff,7vw -40vh 1px 1px #fff,15vw 18vh 0px 0px #fff,25vw -13vh 1px 1px #fff,-46vw -12vh 1px 1px #fff,-18vw 22vh 0px 0px #fff,23vw -9vh 1px 0px #fff,50vw 12vh 0px 1px #fff,45vw 2vh 0px 0px #fff,14vw -48vh 1px 0px #fff,23vw 43vh 0px 1px #fff,-40vw 16vh 1px 1px #fff,20vw -31vh 0px 1px #fff,-17vw 44vh 1px 1px #fff,18vw -45vh 0px 0px #fff,33vw -6vh 0px 0px #fff,0vw 7vh 0px 1px #fff,-10vw -18vh 0px 1px #fff,-19vw 5vh 1px 0px #fff,1vw 42vh 0px 0px #fff,22vw 48vh 0px 1px #fff,39vw -8vh 1px 1px #fff,-6vw -42vh 1px 0px #fff,-47vw 34vh 0px 0px #fff,-46vw 19vh 0px 1px #fff,-12vw -32vh 0px 0px #fff,-45vw -38vh 0px 1px #fff,-28vw 18vh 1px 0px #fff,-38vw -46vh 1px 1px #fff,49vw -6vh 1px 1px #fff,-28vw 18vh 1px 1px #fff,10vw -24vh 0px 1px #fff,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fff,-16vw 17vh 0px 0px #fff,18vw 27vh 0px 1px #fff,-8vw -10vh 1px 1px #fff;
-	  
-	  /* stars were too big with the layers above but left the code in case no one cares  -- as in, if noone's just that  one other loner who actually cares    */
-	  
-	  box-shadow: 24vw 9vh 1px 0px #fff,12vw -24vh 0px 1px #fff,-45vw -22vh 0px 0px #fff,-37vw -40vh 0px 1px #fff,29vw 19vh 0px 1px #fff,4vw -8vh 0px 1px #fff,-5vw 21vh 1px 1px #fff,-27vw 26vh 1px 1px #fff,-47vw -3vh 1px 1px #fff,-28vw -30vh 0px 1px #fff,-43vw -27vh 0px 1px #fff,4vw 22vh 1px 1px #fff,36vw 23vh 0px 0px #fff,-21vw 24vh 1px 1px #fff,-16vw 2vh 1px 0px #fff,-16vw -6vh 0px 0px #fff,5vw 26vh 0px 0px #fff,-34vw 41vh 0px 0px #fff,1vw 42vh 1px 1px #fff,11vw -13vh 1px 1px #fff,48vw -8vh 1px 0px #fff,22vw -15vh 0px 0px #fff,45vw 49vh 0px 0px #fff,43vw -27vh 1px 1px #fff,20vw -2vh 0px 0px #fff,8vw 22vh 0px 1px #fff,39vw 48vh 1px 1px #fff,-21vw -11vh 0px 1px #fff,-40vw 45vh 0px 1px #fff,11vw -30vh 1px 0px #fff,26vw 30vh 1px 0px #fff,45vw -29vh 0px 1px #fff,-2vw 18vh 0px 0px #fff,-29vw -45vh 1px 0px #fff,-7vw -27vh 1px 1px #fff,42vw 24vh 0px 0px #fff,45vw -48vh 1px 0px #fff,-36vw -18vh 0px 0px #fff,-44vw 13vh 0px 1px #fff,36vw 16vh 0px 1px #fff,40vw 24vh 0px 0px #fff,18vw 11vh 0px 0px #fff,-15vw -23vh 1px 0px #fff,-24vw 48vh 0px 1px #fff,27vw -45vh 1px 0px #fff,-2vw -24vh 0px 1px #fff,-15vw -28vh 0px 0px #fff,-43vw 13vh 1px 0px #fff,7vw 27vh 1px 0px #fff,47vw 5vh 0px 0px #fff,-45vw 15vh 1px 1px #fff,-5vw -28vh 0px 1px #fff,38vw 25vh 1px 1px #fff,-39vw -1vh 1px 0px #fff,5vw 0vh 1px 0px #fff,49vw 13vh 0px 0px #fff,48vw 10vh 0px 1px #fff,19vw -28vh 0px 0px #fff,4vw 7vh 0px 0px #fff,21vw 21vh 1px 1px #fff,-15vw -15vh 0px 1px #fff,-6vw -42vh 1px 0px #fff,-15vw 48vh 1px 1px #fff,-23vw 25vh 1px 1px #fff,-48vw 25vh 0px 1px #fff,-31vw -19vh 0px 1px #fff,4vw 37vh 1px 1px #fff,-43vw 28vh 0px 0px #fff,3vw -25vh 0px 1px #fff,-39vw 14vh 0px 1px #fff,-40vw 31vh 0px 1px #fff,35vw -36vh 1px 1px #fff,16vw 49vh 0px 0px #fff,6vw 39vh 0px 0px #fff,3vw -35vh 0px 1px #fff,-44vw -2vh 1px 0px #fff,-6vw 21vh 1px 0px #fff,48vw 9vh 1px 1px #fff,-43vw 30vh 1px 1px #fff,29vw -12vh 1px 1px #fff,-48vw 13vh 1px 0px #fff,-42vw 32vh 1px 1px #fff,34vw 15vh 1px 1px #fff,29vw -37vh 1px 1px #fff,28vw 2vh 0px 0px #fff;
-	  animation: zoom 10s alternate infinite; 
-	}
-	
-	@keyframes zoom {
-		0%{
-			transform: scale(1);
-		}
-		100%{
-			transform: scale(1.5);
-		}
-	}
-	
-	@keyframes gradient {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
 	
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2490,7 +2469,6 @@ input, select, textarea {
 
 		.image img {
 			border-radius: 8px;
-			border-color: #393939;
 			display: block;
 		}
 
@@ -2563,7 +2541,7 @@ input, select, textarea {
 	}
 
 	.logoImage:hover {
-		transform: scale(1.1);
+		transform: scale(1.07);
 	}
 
 /* List */
@@ -3036,23 +3014,23 @@ input, select, textarea {
 		}
 
 			.statistics li.style1 {
-				background-color: #2D3A48;
+				background-color: #efa8b0;
 			}
 
 			.statistics li.style2 {
-				background-color: #43606F;
+				background-color: #c79cc8;
 			}
 
 			.statistics li.style3 {
-				background-color: #7E6B8F ;
+				background-color: #a89cc8;
 			}
 
 			.statistics li.style4 {
-				background-color: #9B8A5A ;
+				background-color: #9bb2e1;
 			}
 
 			.statistics li.style5 {
-				background-color: #5A7A89;
+				background-color: #8cc9f0;
 			}
 
 			.statistics li strong, .statistics li b {
@@ -3367,13 +3345,13 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #383838;
-		color: #FFF;
+		background-color: #ffffff;
+		color: #636363;
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
-		background-color: #202020;
+		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
@@ -3381,32 +3359,32 @@ input, select, textarea {
 	}
 
 		#nav input, #nav select, #nav textarea {
-			color: #383838;
+			color: #636363;
 		}
 
 		#nav a:hover {
-			color: #383838;
+			color: #636363;
 		}
 
 		#nav strong, #nav b {
-			color: #383838;
+			color: #636363;
 		}
 
 		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
-			color: #383838;
+			color: #636363;
 		}
 
 		#nav blockquote {
-			border-left-color: #404040;
+			border-left-color: #dddddd;
 		}
 
 		#nav code {
-			background: rgba(28, 28, 28, 0.95);
-			border-color: #404040;
+			background: rgba(222, 222, 222, 0.25);
+			border-color: #dddddd;
 		}
 
 		#nav hr {
-			border-bottom-color: #404040;
+			border-bottom-color: #dddddd;
 		}
 
 		#nav + #main {
@@ -3445,12 +3423,11 @@ input, select, textarea {
 				}
 
 					#nav ul li a:hover {
-						background-color: rgba(179, 179, 179, 0.25);
-						color: #FFF;
+						background-color: rgba(222, 222, 222, 0.25);
 					}
 
 					#nav ul li a.active {
-						background-color: #383838;
+						background-color: #ffffff;
 						box-shadow: none;
 					}
 
@@ -3458,7 +3435,7 @@ input, select, textarea {
 			position: fixed;
 			top: 0;
 			padding: 0.5em 1em;
-			background-color: rgba(28, 28, 28, 0.95);
+			background-color: rgba(247, 247, 247, 0.95);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			z-index: 10000;
@@ -3487,13 +3464,13 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #404040; /*MIDDLE BACKGROUND*/
-		color: #FFF; /*MIDDLE TEXT*/
+		background-color: #ffffff;
+		color: #636363;
 		border-radius: 0.25em;
 	}
 
 		#main input, #main select, #main textarea {
-			color: #FFF;
+			color: #636363;
 		}
 
 		#main a:hover {
@@ -3505,7 +3482,7 @@ input, select, textarea {
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #FFF; /*TEXT COLOUR*/
+			color: #636363;
 		}
 
 		#main blockquote {
@@ -3532,7 +3509,7 @@ input, select, textarea {
 		#main .button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #FFF !important;
+			color: #636363 !important;
 		}
 
 			#main input[type="submit"]:hover,
